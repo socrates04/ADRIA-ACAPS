@@ -1,0 +1,62 @@
+{
+  "_id": "uniqueObjectId",
+  "title": "Customer Satisfaction Survey",
+  "creationDate": "2024-08-27T12:34:56Z",
+  "validated": false,
+  "validationDate": null,
+  "distributed": false,
+  "validationScore": 85,
+  "nbrSubmissions": 0,
+  "lastUpdated": "2024-08-27T12:34:56Z",
+  "validatorId": "validator123",
+  "validatorName": "John Doe",
+  "creatorId": "creator456",
+  "creatorName": "Jane Smith",
+  "sections": [
+    {
+      "title": "Personal Information",
+      "validationScore": 70,
+      "questions": [
+        {
+          "number": 1,
+          "text": "What is your age?",
+          "type": "UNIQUECHOICE",
+          "required": true,
+          "choices": [
+            { "name": "18-24", "grade": 1 },
+            { "name": "25-34", "grade": 2 }
+          ],
+          "subsections": []
+        },
+        {
+          "number": 2,
+          "text": "Are you satisfied with our service?",
+          "type": "BOULEAN",
+          "required": true,
+          "choices": [
+            { "name": "Yes", "grade": 1 },
+            { "name": "No", "grade": 0 }
+          ],
+          "subsections": [
+            {
+              "triggerAnswer": "No",
+              "questions": [
+                {
+                  "number": 3,
+                  "text": "Please explain why you are not satisfied.",
+                  "type": "MULTICHOICE",
+                  "required": true,
+                  "choices": [
+                    { "name": "Price", "grade": 1 },
+                    { "name": "Quality", "grade": 2 }
+                  ],
+                  "subsections": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
